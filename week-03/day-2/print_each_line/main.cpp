@@ -32,6 +32,7 @@ int main () {
     } catch (std::length_error& e){
         std::cout << "Something went wrong." << std::endl;
     }
+    fileForTheExercise.close();
 
     return 0;
 }
