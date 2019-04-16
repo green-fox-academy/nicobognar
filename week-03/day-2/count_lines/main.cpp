@@ -38,5 +38,6 @@ int numberOfLines(std::string fileName){
     } catch (...){
         std::cout << "Unexpected error" << std::endl;
     }
+    inputFile.close();
     return nrOfLines;
 }
