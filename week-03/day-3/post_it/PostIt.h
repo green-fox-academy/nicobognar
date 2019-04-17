@@ -3,6 +3,7 @@
 //
 #ifndef POST_IT_POSTIT_H
 #define POST_IT_POSTIT_H
+
 #include <string>
 #include <iostream>
 
@@ -24,6 +25,9 @@ public:
     std::string &getTextColor();
 
     std::string showMe();
+
+    ~PostIt();
+
 
 private:
     std::string backgroundColor;

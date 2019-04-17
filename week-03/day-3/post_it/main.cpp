@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "PostIt.h"
+
 int main() {
     PostIt idea1("orange", "Idea", "blue");
     idea1.showMe();

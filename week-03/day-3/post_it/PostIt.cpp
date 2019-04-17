@@ -6,7 +6,7 @@
 #include <string>
 
 
-PostIt::PostIt(std::string newBackgroundColor, std::string newText, std::string newTextColor){
+PostIt::PostIt(std::string newBackgroundColor, std::string newText, std::string newTextColor) {
 
     setBackgroundColor(newBackgroundColor);
     setText(newText);
@@ -37,7 +37,12 @@ std::string &PostIt::getTextColor() {
     return textColor;
 }
 
-std::string PostIt::showMe(){
-    std::cout << "This is a(n) " << getBackgroundColor() << " with " << getTextColor() << " text: " << getText() << " post-it." << std::endl;
+std::string PostIt::showMe() {
+    std::cout << "This is a(n) " << getBackgroundColor() << " with " << getTextColor() << " text: " << getText()
+              << " post-it." << std::endl;
 }
+
+PostIt::~PostIt() {
+}
+
 
