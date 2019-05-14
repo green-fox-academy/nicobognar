@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "area_and_circumference.h"
 
-#define PI 3.14
-
-float area_of_circle(float radius);
 // define a variable called PI with the value of 3.14
 // create a function which takes the radius of a circle as a parameter
 // and return the area of that cirle
@@ -16,11 +14,8 @@ int main()
     scanf("%f", &radius_input);
     printf("The area of your circle is: %.2f \n", area_of_circle(radius_input));
 
+
     return 0;
 }
 
-float area_of_circle(float radius)
-{
-    float area = radius * radius * PI;
-    return area;
-}
+
