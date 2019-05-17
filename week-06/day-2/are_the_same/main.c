@@ -30,14 +30,14 @@ int are_they_the_same(char *first, char *second)
             *first += 32;
     }
     for (; steps_for_first != 0 ; --steps_for_first) {
-        --*first;
+        --first;
     }
     int steps_for_second = 0;
     for (; *second != '\0'; ++second, ++steps_for_second) {
         if (*second < 91 && *second > 64)
             *second += 32;
     }for (; steps_for_second != 0 ; --steps_for_second) {
-        --*second;
+        --second;
     }
     return !(strncmp(first, second, (strlen(first))));
 }
