@@ -3,7 +3,7 @@
 int sumDigits(int longNumber);
 
 int main() {
-    std::cout << sumDigits(12345) << std::endl;
+    std::cout << sumDigits(123456) << std::endl;
     return 0;
 }
 

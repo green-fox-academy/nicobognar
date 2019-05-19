@@ -19,7 +19,6 @@ int main() {
         fileForTheExercise << "The 5 minute journal" << std::endl;
         fileForTheExercise << "is an excellent way to keep" << std::endl;
         fileForTheExercise << "your motivation and spirits high." << std::endl;
-        fileForTheExercise.close();
     } else {
         std::cout << "Unable to reach/open file!" << std::endl;
     }
@@ -31,22 +30,19 @@ bool copyPaster(std::string filePathFrom, std::string filePathTo){
     bool success = true;
     try{
         std::ifstream fileImCopyingFrom;
-        fileImCopyingFrom.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+        fileImCopyingFrom.exceptions(std::ifstream::badbit);
         std::string rememberUs;
-        int nrOfLines = 0;
         fileImCopyingFrom.open(filePathFrom);
         std::string line;
         while(getline(fileImCopyingFrom, line)) {
-            nrOfLines++;
-            for (int i = 0; i < nrOfLines; ++i) {
-                rememberUs += line;
-            }
+                rememberUs += line + "\n";
         }
         fileImCopyingFrom.close();
         std::ofstream fileImCopyingTo;
         fileImCopyingTo.exceptions(std::ifstream::failbit | std::ifstream::badbit);
         fileImCopyingTo.open(filePathTo);
         fileImCopyingTo<<rememberUs;
+        fileImCopyingTo.close();
 
     } catch (...){
         success = false;

@@ -3,3 +3,11 @@
 //
 
 #include "Trees.h"
+
+Trees::Trees(std::string color, float currentWater)
+        : PlantsInTheGarden(color, TREE, currentWater){
+}
+
+Trees::~Trees() {
+
+}
