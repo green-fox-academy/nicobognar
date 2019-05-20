@@ -68,7 +68,7 @@ int main()
     }
     printf("My list is so big, it holds %d nodes!\n", count_my_list(head));
 
-    printf("The value %d in my list is found at the address: %p.", 5, search_by_value(head, 5));
+    printf("The value %d in my list is found at the address: %p.\n", 5, search_by_value(head, 5));
 
     return 0;
 }
