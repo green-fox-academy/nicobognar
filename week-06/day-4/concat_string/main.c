@@ -23,7 +23,9 @@ int main()
     concatenate_these_strings(first_string_ptr, second_string_ptr);
     printf("Your concatenation result is: %s", first_string_ptr);
     free(first_string_ptr);
+    first_string_ptr = NULL;
     free(second_string_ptr);
+    second_string_ptr = NULL;
     return 0;
 }
 
