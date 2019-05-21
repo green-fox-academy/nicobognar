@@ -27,7 +27,7 @@ int main(void) {
 				HAL_Delay(i * 125);
 			}
 		}
-		for (int j = 8; j > 1; j = j / 2) {
+		for (int j = 4; j > 1; j = j / 2) {
 			for (int l = 0; l < 3; l++) {
 				BSP_LED_On(LED1);
 				HAL_Delay(j * 125);
