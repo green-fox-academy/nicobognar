@@ -14,16 +14,16 @@ Create a function that takes an array of houses (and it's length), and counts th
 houses that are worth to buy.
 */
 
-typedef struct{
+typedef struct {
     char *address;
     float price_in_EUR;
     int number_of_rooms;
     float area_in_square_meters;
 } house;
 
-int is_it_worth_it(house valamelyik);
+int is_it_worth_it(house example);
 
-int how_many_are_valuable(house[], int);
+int how_many_are_valuable(house[], int size);
 
 int main()
 {
@@ -44,8 +44,19 @@ int main()
 
     return 0;
 }
-counter segg
-    for (int i = 0; i < meretparameter; ++i) {
 
-        segg += isitworthitfuggveny(parameter[i])
-    } return segg
+int is_it_worth_it(house example)
+{
+    if (example.price_in_EUR / example.area_in_square_meters >= 400) {
+        return 1;
+    } else return 0;
+}
+
+int how_many_are_valuable(house[] listed_houses, int size)
+{
+    int amount_of_houses = 0;
+    for (int i = 0; i < size; ++i) {
+        amount_of_houses += is_it_worth_it(listed_houses[i]);
+    }
+    return amount_of_houses
+}
